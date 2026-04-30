@@ -46,7 +46,7 @@ I recently developed a project analyzing 1,100+ live job listings, identifying k
 > Developed an interactive Power BI dashboard to analyze sales performance and revenue trends  
 > Identified top-performing products and revenue concentration across categories and regions  
 
-![Dashboard](https://raw.githubusercontent.com/rajanshaky/YOUR_SALES_REPO_NAME/main/assets/dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/rajanshaky/sales_analytic_dashboard/main/assets/dashboard.png)
 
 ---
 
