@@ -46,6 +46,10 @@ I recently developed a project analyzing 1,100+ live job listings, identifying k
 > EDA on 3 years of electricity data uncovering seasonal patterns & anomalies  
 > Tools: Python, Pandas, Matplotlib
 
+> 📊 Featured Total Metering
+ 
+![Dashboard](https://github.com/rajanshaky/household_power_consumption/blob/master/assets/Dashboard.png)
+
 ---
 
 ## 📈 GitHub Stats
