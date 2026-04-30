@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajan — Data Analyst Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f1117;
+    --ink-2: #2a2d3a;
+    --muted: #6b7080;
+    --accent: #1a56db;
+    --accent-light: #e8f0fe;
+    --accent-mid: #4285f4;
+    --teal: #0d7e6e;
+    --teal-light: #e6f7f5;
+    --gold: #b45309;
+    --gold-light: #fef3c7;
+    --border: #e2e6ef;
+    --surface: #f8f9fc;
+    --white: #ffffff;
+    --page-width: 210mm;
+  }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: #dde3ef;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--ink);
+  }
+
+  .page {
+    width: var(--page-width);
+    background: var(--white);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    display: grid;
+    grid-template-columns: 68mm 1fr;
+    min-height: 297mm;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Decorative corner element */
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 0 48px 48px 0;
+    border-color: transparent var(--accent) transparent transparent;
+    z-index: 10;
+  }
+
+  /* ── LEFT SIDEBAR ── */
+  .sidebar {
+    background: var(--ink);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .sidebar-top {
+    background: var(--accent);
+    padding: 36px 22px 28px;
+    position: relative;
+  }
+
+  /* Geometric accent */
+  .sidebar-top::after {
+    content: '';
+    position: absolute;
+    bottom: -18px; left: 0; right: 0;
+    height: 36px;
+    background: var(--accent);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 100%);
+  }
+
+  .name-block {
+    margin-bottom: 0;
+  }
+
+  .name-first {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+
+  .name-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    margin-top: 6px;
+    display: block;
+  }
+
+  .sidebar-body {
+    padding: 42px 22px 24px;
+    flex: 1;
+  }
+
+  .sidebar-section {
+    margin-bottom: 28px;
+  }
+
+  .sidebar-heading {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent-mid);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sidebar-heading::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  /* Contact */
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-bottom: 10px;
+  }
+
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    opacity: 0.65;
+  }
+
+  .contact-text {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.4;
+    font-family: 'DM Mono', monospace;
+    font-weight: 400;
+    word-break: break-all;
+  }
+
+  /* Skills */
+  .skill-group {
+    margin-bottom: 16px;
+  }
+
+  .skill-group-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .skill-pill {
+    display: inline-block;
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 10.5px;
+    color: rgba(255,255,255,0.82);
+    margin: 0 3px 4px 0;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* Cert */
+  .cert-item {
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 7px;
+    padding-left: 12px;
+    position: relative;
+    line-height: 1.4;
+  }
+
+  .cert-item::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-mid);
+    font-size: 9px;
+    top: 2px;
+  }
+
+  /* Languages */
+  .lang-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .lang-name {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.78);
+  }
+
+  .lang-badge {
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 2px 7px;
+    border-radius: 20px;
+    background: rgba(66, 133, 244, 0.25);
+    color: #90b8f8;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .main {
+    padding: 36px 28px 28px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  /* Summary banner */
+  .summary-banner {
+    background: var(--surface);
+    border-left: 3.5px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+  }
+
+  .summary-banner p {
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    font-weight: 300;
+  }
+
+  /* Section */
+  .section-label {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(to right, var(--border), transparent);
+  }
+
+  /* Experience */
+  .exp-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .exp-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3.5px;
+    height: 100%;
+    background: var(--teal);
+    border-radius: 8px 0 0 8px;
+  }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3px;
+  }
+
+  .exp-role {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .exp-date {
+    font-size: 10px;
+    font-family: 'DM Mono', monospace;
+    color: var(--muted);
+    background: var(--teal-light);
+    padding: 2px 8px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .exp-company {
+    font-size: 11.5px;
+    color: var(--teal);
+    font-weight: 500;
+    margin-bottom: 9px;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    padding: 0;
+  }
+
+  .exp-bullets li {
+    font-size: 11.5px;
+    color: var(--ink-2);
+    line-height: 1.55;
+    margin-bottom: 4px;
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .exp-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-size: 10px;
+    top: 1px;
+  }
+
+  /* Projects */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .project-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: var(--surface);
+    position: relative;
+  }
+
+  .project-num {
+    position: absolute;
+    top: 10px; right: 12px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--border);
+    line-height: 1;
+    user-select: none;
+  }
+
+  .project-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+    padding-right: 28px;
+    line-height: 1.35;
+  }
+
+  .project-point {
+    font-size: 10.5px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 3px;
+    padding-left: 10px;
+    position: relative;
+  }
+
+  .project-point::before {
+    content: '·';
+    position: absolute;
+    left: 2px;
+    color: var(--accent);
+    font-size: 14px;
+    line-height: 1.1;
+  }
+
+  .project-tag {
+    display: inline-block;
+    margin-top: 7px;
+    font-size: 9.5px;
+    font-family: 'DM Mono', monospace;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  /* Education */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .edu-row:last-child { border-bottom: none; }
+
+  .edu-degree {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .edu-school {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .edu-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    background: var(--gold-light);
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  /* Stat chips (decorative) */
+  .stats-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+  }
+
+  .stat-chip {
+    background: var(--accent-light);
+    border: 1px solid rgba(26,86,219,0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 10.5px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* Links row in sidebar */
+  .link-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 9px;
+    text-decoration: none;
+  }
+
+  .link-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .link-platform {
+    font-size: 9.5px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    font-weight: 500;
+  }
+
+  @media print {
+    body { background: none; padding: 0; }
+    .page { box-shadow: none; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="name-block">
+        <div class="name-first">Rajan</div>
+        <span class="name-title">Data Analyst</span>
+      </div>
+    </div>
+
+    <div class="sidebar-body">
+
+      <!-- Contact -->
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Contact</div>
+
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:white;">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/>
+          </svg>
+          <span class="contact-text">+91 6393142003</span>
+        </div>
+
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:white;">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span class="contact-text">shakyrajan009@gmail.com</span>
+        </div>
+      </div>
+
+      <!-- Profiles -->
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Profiles</div>
+
+        <a href="https://linkedin.com/in/rajan-841307241" class="link-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:white;">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+          <div>
+            <div class="link-platform">LinkedIn</div>
+            <div class="link-label">rajan-841307241</div>
+          </div>
+        </a>
+
+        <a href="https://github.com/rajanshaky" class="link-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:white;">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+          </svg>
+          <div>
+            <div class="link-platform">GitHub</div>
+            <div class="link-label">rajanshaky</div>
+          </div>
+        </a>
+
+        <a href="https://kaggle.com/rajan009" class="link-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:white;">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+          <div>
+            <div class="link-platform">Kaggle</div>
+            <div class="link-label">rajan009</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Skills -->
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Languages</div>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">Excel</span>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Libraries</div>
+          <span class="skill-pill">Pandas</span>
+          <span class="skill-pill">NumPy</span>
+          <span class="skill-pill">Matplotlib</span>
+          <span class="skill-pill">Seaborn</span>
+          <span class="skill-pill">Scikit-learn</span>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Visualization</div>
+          <span class="skill-pill">Power BI</span>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Tools</div>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">Jupyter</span>
+          <span class="skill-pill">VS Code</span>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Analytical</div>
+          <span class="skill-pill">EDA</span>
+          <span class="skill-pill">Data Cleaning</span>
+          <span class="skill-pill">Statistical Analysis</span>
+          <span class="skill-pill">Dashboard Design</span>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Certifications</div>
+        <div class="cert-item">Excel for Data Analysis</div>
+        <div class="cert-item">Power BI Analytics</div>
+        <div class="cert-item">Python &amp; SQL for Data Science</div>
+        <div class="cert-item">Core Python</div>
+      </div>
+
+      <!-- Languages -->
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Languages</div>
+        <div class="lang-item">
+          <span class="lang-name">Hindi</span>
+          <span class="lang-badge">Native</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">English</span>
+          <span class="lang-badge">Professional</span>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ── MAIN ── -->
+  <main class="main">
+
+    <!-- Summary -->
+    <div>
+      <div class="section-label">Profile</div>
+      <div class="summary-banner">
+        <p>Data Analyst with hands-on experience building end-to-end analytics pipelines and dashboards using Python, SQL, and Power BI. Proven ability to work with real-world datasets to extract actionable insights and support data-driven decision-making across domains including energy, sales, and job markets.</p>
+      </div>
+      <div class="stats-row">
+        <span class="stat-chip">1 Year Experience</span>
+        <span class="stat-chip">3+ Projects Delivered</span>
+        <span class="stat-chip">1,100+ Data Points Analyzed</span>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div>
+      <div class="section-label">Experience</div>
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-role">Data Analytics Intern</div>
+          <div class="exp-date">Dec 2023 – Dec 2024</div>
+        </div>
+        <div class="exp-company">ShapeMySkills</div>
+        <ul class="exp-bullets">
+          <li>Cleaned, processed, and analyzed complex datasets using Python, SQL, and Excel to ensure data integrity and readiness for reporting</li>
+          <li>Performed in-depth EDA on 3+ years of electricity consumption data, uncovering seasonal trends and usage anomalies</li>
+          <li>Designed and deployed interactive dashboards in Power BI, enabling stakeholder self-service analytics</li>
+          <li>Applied ML models using Scikit-learn to build predictive components for analytics projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div>
+      <div class="section-label">Projects</div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-num">01</div>
+          <div class="project-title">Job Market Pulse Analytics Pipeline</div>
+          <div class="project-point">Analyzed 1,100+ job listings end-to-end</div>
+          <div class="project-point">Revealed ~29% of roles concentrated in Bangalore; top 3 cities cover ~66%</div>
+          <div class="project-point">Built interactive Power BI dashboard for trend exploration</div>
+          <div><span class="project-tag">Python · Power BI · EDA</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-num">02</div>
+          <div class="project-title">Sales Performance Analytics Dashboard</div>
+          <div class="project-point">Analyzed multi-period sales trends and KPIs</div>
+          <div class="project-point">Identified revenue concentration risks across product lines</div>
+          <div class="project-point">Built Power BI dashboard for executive reporting</div>
+          <div><span class="project-tag">SQL · Power BI · KPIs</span></div>
+        </div>
+
+        <div class="project-card" style="grid-column: 1 / -1;">
+          <div class="project-num">03</div>
+          <div class="project-title">Household Energy Consumption Analysis</div>
+          <div class="project-point">Analyzed 3 years of granular energy data to surface seasonal consumption patterns and demand peaks</div>
+          <div class="project-point">Generated actionable insights for energy optimization through statistical analysis and visual reporting</div>
+          <div><span class="project-tag">Python · Pandas · Seaborn · Statistical Analysis</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div>
+      <div class="section-label">Education</div>
+
+      <div class="edu-row">
+        <div>
+          <div class="edu-degree">MCA — Master of Computer Applications</div>
+          <div class="edu-school">IGNOU &nbsp;·&nbsp; Pursuing</div>
+        </div>
+        <div class="edu-badge">In Progress</div>
+      </div>
+
+      <div class="edu-row">
+        <div>
+          <div class="edu-degree">BCA — Bachelor of Computer Applications</div>
+          <div class="edu-school">University of Lucknow</div>
+        </div>
+        <div class="edu-badge">78%</div>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
