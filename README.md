@@ -36,19 +36,25 @@ I recently developed a project analyzing 1,100+ live job listings, identifying k
 
 ### 📊 Job Market Pulse — Analytics Dashboard
 > Built an end-to-end data pipeline using Python, SQL, and Power BI to analyze 1,100+ live job listings  
-> Identified key trends such as ~29% job concentration in Bangalore and ~66% in top 3 cities
+> Identified key trends such as ~29% job concentration in Bangalore and ~66% in top 3 cities  
 
-> ## 📊 Featured Dashboard
+![Dashboard](https://raw.githubusercontent.com/rajanshaky/job_market_pulse/main/assets/dashboard.png)
 
-![Dashboard](https://github.com/rajanshaky/job_market_pulse/blob/main/assets/dashboard.png)
+---
 
-### ⚡ Household Power Consumption Analysis
-> EDA on 3 years of electricity data uncovering seasonal patterns & anomalies  
-> Tools: Python, Pandas, Matplotlib
+### 📈 Sales Performance Analytics Dashboard
+> Developed an interactive Power BI dashboard to analyze sales performance and revenue trends  
+> Identified top-performing products and revenue concentration across categories and regions  
 
-> ## 📊 Featured Total Metering
- 
-![Dashboard](https://github.com/rajanshaky/household_power_consumption/blob/master/assets/Dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/rajanshaky/YOUR_SALES_REPO_NAME/main/assets/dashboard.png)
+
+---
+
+### ⚡ Household Energy Consumption Analysis
+> Analyzed 3 years of electricity usage data to identify seasonal patterns and peak consumption periods  
+> Performed time-based analysis (monthly, hourly, daily) to uncover energy usage trends  
+
+![Dashboard](https://raw.githubusercontent.com/rajanshaky/household_power_consumption/master/assets/Dashboard.png)
 
 ---
 
