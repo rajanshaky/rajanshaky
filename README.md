@@ -40,7 +40,7 @@ I recently developed a project analyzing 1,100+ live job listings, identifying k
 
 > ## 📊 Featured Dashboard
 
-![Dashboard](assets/dashboard.png)
+![Dashboard](https://github.com/rajanshaky/job_market_pulse/blob/main/assets/dashboard.png)
 
 ### ⚡ Household Power Consumption Analysis
 > EDA on 3 years of electricity data uncovering seasonal patterns & anomalies  
