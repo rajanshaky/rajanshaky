@@ -39,7 +39,7 @@ I'm a data analyst focused on building end-to-end analytics systems using Python
 
 **Tech Stack:** Python, MySQL, Power BI, REST APIs, Pandas, SQL, ETL Automation  
 
-![Dashboard](https://github.com/rajanshaky/live-aqi-analytics/blob/main/assets/dashboard.png)
+![Dashboard](https://github.com/rajanshaky/live-aqi-analytics/blob/main/assets/monitoring_overview.png)
 
 🔗 Repository: https://github.com/rajanshaky/live-aqi-analytics
 
