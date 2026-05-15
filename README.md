@@ -1,6 +1,6 @@
 # Hi, I'm Rajan 👋
 
-🎯 Data Analyst | Building end-to-end data pipelines & dashboards | Python, SQL, Power BI 
+🎯 Data Analyst | Python, SQL, Power BI | ETL Pipelines • Dashboard Analytics • API Data Engineering  
 📍 India | 📬 shakyrajan009@gmail.com  
 🔗 [LinkedIn](https://linkedin.com/in/rajan-841307241) • [Kaggle](https://kaggle.com/rajan009)
 
@@ -8,15 +8,13 @@
 
 ## 👨‍💻 About Me
 
-I'm a data analyst with hands-on experience building end-to-end analytics solutions —
-from raw data ingestion to interactive dashboards. I'm a data analyst focused on building end-to-end data pipelines — from API-based data ingestion to dashboards that reveal real market trends.
+I'm a data analyst focused on building end-to-end analytics systems using Python, SQL, MySQL, and Power BI. I work on projects involving API-driven data pipelines, workflow automation, dashboard development, and trend analysis to transform raw data into actionable insights.
 
-I recently developed a project analyzing 1,100+ live job listings, identifying key hiring patterns such as city concentration and role demand.
-
-- 🏢 🏢 Data Analytics Intern @ ShapeMySkills — worked on real-world datasets and built dashboards for insights | 1 year of real-world analytics experience
+- 🏢 Data Analytics Intern @ ShapeMySkills — worked on real-world datasets and built dashboards for business insights
+- 📊 Built projects involving ETL automation, real-time analytics, and Power BI reporting
 - 🎓 Pursuing MCA from IGNOU (2024–2026)
-- 🤖 Interested in ML, predictive analytics & data storytelling
-- 🌱 Currently deepening my skills in advanced SQL and data engineering
+- 🤖 Interested in Machine Learning, predictive analytics, and data storytelling
+- 🌱 Currently strengthening skills in advanced SQL, data engineering, and analytics automation
 
 ---
 
@@ -24,44 +22,81 @@ I recently developed a project analyzing 1,100+ live job listings, identifying k
 
 | Category | Tools |
 |---|---|
-| Core | Python, SQL |
+| Programming | Python, SQL |
 | Data Analysis | Pandas, NumPy |
 | Visualization | Power BI, Tableau, Matplotlib, Seaborn |
 | Machine Learning | Scikit-learn |
+| Database | MySQL |
 | Tools | Git, Jupyter, VS Code |
 
 ---
 
-## 🚀 Featured Projects
+# 🚀 Featured Projects
+
+### 🌍 Live AQI Monitoring & Pollutant Analytics System
+> Built a real-time environmental monitoring pipeline using Python, MySQL, and Power BI  
+> Automated API-based pollutant collection with scheduled ETL workflows and created multi-page dashboards for AQI trends, pollutant intensity, and severity analysis  
+
+**Tech Stack:** Python, MySQL, Power BI, REST APIs, Pandas, SQL, ETL Automation  
+
+![Dashboard](https://github.com/rajanshaky/live-aqi-analytics/blob/main/assets/dashboard.png)
+
+🔗 Repository: https://github.com/rajanshaky/live-aqi-analytics
+
+---
 
 ### 📊 Job Market Pulse — Analytics Dashboard
-> Built an end-to-end data pipeline using Python, SQL, and Power BI to analyze 1,100+ live job listings  
-> Identified key trends such as ~29% job concentration in Bangalore and ~66% in top 3 cities  
+> Built an end-to-end analytics pipeline using Python, SQL, and Power BI to analyze 1,100+ live job listings  
+> Identified hiring trends, high-demand skills, and city-wise job concentration patterns across the dataset  
+
+**Tech Stack:** Python, SQL, Power BI, Pandas, NumPy  
 
 ![Dashboard](https://github.com/rajanshaky/job_market_pulse/blob/main/assets/dashboard.png)
+
+🔗 Repository: https://github.com/rajanshaky/job_market_pulse
 
 ---
 
 ### 📈 Sales Performance Analytics Dashboard
-> Developed an interactive Power BI dashboard to analyze sales performance and revenue trends  
-> Identified top-performing products and revenue concentration across categories and regions  
+> Developed an interactive Power BI dashboard to analyze sales performance, revenue trends, and category-wise growth  
+> Built KPI-focused reports to identify revenue concentration and top-performing product segments  
+
+**Tech Stack:** SQL, Power BI, APIs, KPI Analytics  
 
 ![Dashboard](https://github.com/rajanshaky/sales_analytic_dashboard/blob/main/assets/Dashboard.png)
+
+🔗 Repository: https://github.com/rajanshaky/sales_analytic_dashboard
 
 ---
 
 ### ⚡ Household Energy Consumption Analysis
 > Analyzed 3 years of electricity usage data to identify seasonal patterns and peak consumption periods  
-> Performed time-based analysis (monthly, hourly, daily) to uncover energy usage trends  
+> Performed time-series analysis to uncover hourly, daily, and monthly energy usage trends  
+
+**Tech Stack:** Python, Pandas, Matplotlib, Seaborn  
 
 ![Dashboard](https://github.com/rajanshaky/household_power_consumption/blob/master/assets/Dashboard.png)
 
----
-
-## 📈 GitHub Stats
-
-![Rajan's GitHub Stats](https://github-readme-stats.vercel.app/api?username=rajanshaky&show_icons=true&theme=tokyonight)
+🔗 Repository: https://github.com/rajanshaky/household_power_consumption
 
 ---
 
-⭐ *Feel free to explore my repos and connect with me on LinkedIn!*
+## 📚 Currently Learning
+
+- Advanced SQL optimization
+- Data engineering workflows
+- ETL orchestration
+- Machine Learning fundamentals
+- Cloud-based analytics tools
+
+---
+
+## 🤝 Connect With Me
+
+- LinkedIn: https://linkedin.com/in/rajan-841307241
+- Kaggle: https://kaggle.com/rajan009
+- GitHub: https://github.com/rajanshaky
+
+---
+
+⭐ Feel free to explore my repositories and connect with me!
